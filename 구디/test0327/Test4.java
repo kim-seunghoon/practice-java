@@ -27,6 +27,8 @@ class Circle {
 	}
 	public String toString() {
 		return no + "번 원 : 반지름 : " + r + ", 넓이 : " + area() + ", 둘레 : " + length();
+		//소수점을 적게 보고 싶다면
+		//return String.format("%d번원 : 반지름 : %d 넓이 : %d 둘레 : %d", no, r, area(), lenggth())
 	}
 	void scale(double m) {
 		r *= m;
