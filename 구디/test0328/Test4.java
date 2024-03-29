@@ -27,6 +27,7 @@ class Student {
 	int studno, kor, eng, math;
 	String name;
 	Student (String name, int studno) {
+		//this(name, studno, 0, 0, 0); //이 문제는 사용하지 않아도 0으로 자동 초기화 되지만 0이 아닌 수가 기본적으로 필요할 경우에 this를 이렇게 사용하면 된다.
 		this.name = name;
 		this.studno = studno;
 	}
