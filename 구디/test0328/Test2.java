@@ -58,8 +58,8 @@ class Peach extends Fruit {
 		return "복숭아";
 	}
 }
-class Cock extends Drink {
-	Cock(int price, int ml) {
+class Coke extends Drink {
+	Coke(int price, int ml) {
 		super(price, ml);
 	}
 	public String toString() {
@@ -97,7 +97,7 @@ public class Test2 {
 		System.out.println("사과 가격:" + apple.price);
 		System.out.println("사과 당도:" + apple.brix);
 		Peach peach = new Peach(1000,13.5);//가격, 당도(brix)
-		Cock cock = new Cock(500,500);   //가격, 용량(ml)
+		Coke coke = new Coke(500,500);   //가격, 용량(ml)
 		Sidar sidar = new Sidar(1500,1000);//가격, 용량(ml)
 		Biscuit bis = new Biscuit(10000,500);//가격, 무게(gram)
 		Cookie cookie = new Cookie(500,5000);//가격, 무게(gram)
