@@ -5,12 +5,12 @@ public class Snippet {
 		
 		
 		/*
-		1. 인터페이스 내에 메서드를 적합하게 선언한 형태 2개를 고르시오. 정답 : 1번, 3번 
+		1. 인터페이스 내에 메서드를 적합하게 선언한 형태 2개를 고르시오. 정답 : 1번, 3번XXX 2번
 		(1) void methoda(); 
 		(2) public double methoda();
-		(3) public final double methoda();
-		(4) static void methoda(double d1);
-		(5) protected void methoda(double d1);
+		(3) public final double methoda(); ->final오류
+		(4) static void methoda(double d1); ->static 오류, 구현부 필요
+		(5) protected void methoda(double d1); ->protected 오류, 인터페이스 모든 멤버는 public
 		
 		2. 2번째 줄과 동일한 의미를 갖는 문장 3개를 고르시오. 정답 : 1번, 2번, 3번
 		
