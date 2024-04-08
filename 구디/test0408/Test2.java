@@ -26,26 +26,24 @@ public class Test2 {
 				"02-3456-7890","053-2456-7980", 
 				"088-2346-9870","013-3456-7890",
 				"051-1234-5678","02-1234-7890"};
-		
-		for (String s : phoneNumArr) {
-			if (s.equals("(0[0-9]{1,2})-(\\d{4})-(\\d{4})")) {
-				System.out.println(s);
+	Scanner scan = new Scanner(System.in);
+		while (true) {
+			System.out.println("찾고자 하는 번호를 입력하세요(종료 : q)");
+			String num = scan.nextLine();
+			if (num.equalsIgnoreCase("Q")) {
+				break;
 			}
-			String telPattern = ("(02)-(\\d{4})-(\\d{4})");
-			Pattern p = Pattern.compile(telPattern);
-			Matcher m = p.matcher(s);
-			int i = 0;
-			while (m.find()) {
-				System.out.println(++i+ " : " +m.group()+m.group(1)+m.group(2));
-			}
-			String telPattern2 = ("(0[0-9]{1,2})-(1234)-(\\d{4})");
-			Pattern p1 = Pattern.compile(telPattern2);
-			Matcher m1 = p.matcher(s);
-			int i2 = 0;
-			while (m1.find()) {
-				System.out.println(++i2+ " : " +m1.group()+m1.group(1)+m1.group(2));
+			String pattern = num;
+			Pattern p = Pattern.compile(pattern);
+			for (int i = 0; i < phoneNumArr.length; i++) {
+				String phoneNum = phoneNumArr[i];
+				Matcher m = p.matcher(phoneNum);
+				if (m.find()) {
+					System.out.println(phoneNum);
+				}
 			}
 		}
+		System.out.println("프로그램 종료");
 		
 	}
 }
