@@ -1,6 +1,6 @@
 package chapter11;
 /*
- * 년과 월을 입력하면 해당 달 첫번 째날과 마지막 날 나오게하기
+ * 년과 월을 입력하면 해당 달 첫 번째 날과 마지막 날 나오게하기
  */
 import java.util.Scanner;
 import java.text.ParseException;
