@@ -36,7 +36,7 @@ public class ArraysEx1 {
 		System.out.println(Arrays.toString(arr2));
 		System.out.println("----------------");
 		int[] numarr = new int[10];
-		//배열의 모든 요서 값을 10으로 저장
+		//배열의 모든 요소 값을 10으로 저장
 		Arrays.fill(numarr, 10);
 		System.out.println(Arrays.toString(numarr));
 		
