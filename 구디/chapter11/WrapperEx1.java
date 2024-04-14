@@ -1,6 +1,6 @@
 package chapter11;
 /*
- * Wrapper 클래스 : 8개의 기본 자료형을 객체호하기 위한 클래스 통칭
+ * Wrapper 클래스 : 8개의 기본 자료형을 객체화 하기 위한 클래스 통칭
  * 
  * 기본자료형		Wrapper 클래스
  * boolean		Boolean
