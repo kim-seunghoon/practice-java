@@ -14,20 +14,20 @@ import java.util.Scanner;
 public class Test1 {
 	public static void main(String[] args) throws IOException, Exception {
 		Scanner scan = new Scanner(System.in);
-		System.out.println("파일명을 입력하세요");
-		String fileName = scan.next();
-		FileInputStream fis = new FileInputStream(fileName);
 		try {
-			int data = 0;
-			byte[] buf = new byte[fis.available()];
-			while ((data = fis.read(buf)) != -1) {
-				System.out.print(new String(buf, 0, data));
-				if (fileName == null) {
-//					throw new FileNotFoundException("해당 파일 없음");
+			while (true) {
+				System.out.println("파일명을 입력하세요");
+				String fileName = scan.next();
+				FileInputStream fis = new FileInputStream(fileName);
+				int data = 0;
+				byte[] buf = new byte[fis.available()];
+				while ((data = fis.read(buf)) != -1) {
+					System.out.print(new String(buf, 0, data));
 				}
 			}
-			fis.close();
 		} catch(FileNotFoundException e) {
+			System.out.println("해당 파일 없음");
+		} catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
