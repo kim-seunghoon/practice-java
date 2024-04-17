@@ -21,15 +21,14 @@ import java.io.PrintStream;
 
 public class Test3 {
 	public static void main(String[] args) throws IOException {
-		BufferedReader stdin = 
-				 new BufferedReader(new InputStreamReader(System.in));
-		System.out.println("파일명을 입력하세요");
-		String fname = stdin.readLine();
-		
-		//파일을 읽기 위한 스트림
-		BufferedReader br = new BufferedReader(new FileReader(fname));
-		
-		stdin.close();
-		br.close();
+		FileInputStream fis = new FileInputStream("bin/chapter14/InputStreamEx1.class");
+		byte[] buf = new byte[16];
+		int len;
+		while ((len = fis.read(buf)) != -1) {
+			for (int i = 0; i < len; i++) {
+				System.out.printf(" %02X", buf[i]);
+			}
+			System.out.println();
+		}
 	}
 }
